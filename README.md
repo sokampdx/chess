@@ -40,6 +40,27 @@ B/b = Bishop
 Q/q = Queen
 K/k = King
 
+Starting position:
+```
+ a b c d e f g h
+-----------------
+|R|N|B|Q|K|B|N|R| 1
+-----------------
+|P|P|P|P|P|P|P|P| 2
+-----------------
+| | | | | | | | | 3
+-----------------
+| | | | | | | | | 4
+-----------------
+| | | | | | | | | 5
+-----------------
+| | | | | | | | | 6
+-----------------
+|p|p|p|p|p|p|p|p| 7
+-----------------
+|r|n|b|q|k|b|n|r| 8
+-----------------
+```
 ## Installation
 
 Add this line to your application's Gemfile:
