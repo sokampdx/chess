@@ -29,6 +29,6 @@ describe Game do
   end
 
   it 'starts with an initial board setup' do
-    expect(game.display_board).to eq(INITIAL_BOARD_SETUP)
+    expect(game.display_position).to eq(INITIAL_BOARD_SETUP)
   end
 end
