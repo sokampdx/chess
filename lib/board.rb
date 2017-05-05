@@ -12,8 +12,8 @@ module ChessGame
     end 
 
     def empty_rank(rank_no)
-      '| '*9 + "#{rank_no}"
-    end 
+      rank(" "*8, rank_no)
+    end
 
     def rank(pieces_mapping, rank_no)
       pieces = pieces_mapping.split("")
@@ -21,19 +21,12 @@ module ChessGame
       pipes.zip(pieces).flatten.join + " #{rank_no}"
     end 
 
-    def positions
+    def positions(position_map = 'rnbqkbnrpppppppp                                PPPPPPPPRNBQKBNR')
+      rank_map = position_map.scan(/.{8}/)
+      rank_no = [*1..8]
+      ranks = rank_map.zip(rank_no).map { |pieces, num| rank(pieces, num) }
       dividers = Array.new(9, divider)
-      non_dividers = [ 
-        header, 
-        rank('RNBQKBNR', 8), 
-        rank('P'*8, 7), 
-        empty_rank(6),
-        empty_rank(5),
-        empty_rank(4),
-        empty_rank(3),
-        rank('p'*8, 2), 
-        rank('rnbqkbnr', 1)
-      ]   
+      non_dividers = [header] + ranks.reverse
       non_dividers.zip(dividers).flatten.join("\n") + "\n"
     end
   end
