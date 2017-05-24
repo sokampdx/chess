@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Rules do
+describe Piece do
   let(:init_position) { 'rnbqkbnrpppppppp                                PPPPPPPPRNBQKBNR' }
   let(:init_position) { 'rnbqkbnrpppppppp            P                   PPPP PPPRNBQKBNR' }
   let(:norm_position) { 'rnbqkbnrpppp ppp            p                   PPPPPPPPRNBQKBNR' }

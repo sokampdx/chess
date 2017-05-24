@@ -8,7 +8,7 @@ module ChessGame
 
     def display_position
       board = Board.new
-      board.positions
+      board.display
     end
   end
 end

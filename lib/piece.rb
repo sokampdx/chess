@@ -1,4 +1,4 @@
-module Rules
+class Piece
   def move(init_position, a_move)
     from, to = parse_move(a_move)
 
