@@ -1,4 +1,5 @@
-Dir["./lib/*.rb"].each {|file| require file }
+require './path'
+# Dir["./lib/*.rb"].each {|file| require file }
 
 include ChessGame
 

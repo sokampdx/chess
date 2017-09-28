@@ -28,10 +28,10 @@ describe Board do
       end
     end
   end
-      
+
   context 'when supply position argument' do
     let(:empty_game) { " "*64 }
-    let(:empty_game_position) { File.read("#{File.dirname(__FILE__)}/supports/empty_game_position") } 
+    let(:empty_game_position) { File.read("#{File.dirname(__FILE__)}/supports/empty_game_position") }
     let(:board) { Board.new(empty_game) }
 
     describe '.display' do

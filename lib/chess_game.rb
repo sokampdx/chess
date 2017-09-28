@@ -1,5 +1,4 @@
-require "chess_game/version"
-require 'board'
+#require "chess_game/version"
 
 module ChessGame
   class Game
