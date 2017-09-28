@@ -10,7 +10,7 @@ module ChessGame
 
     def divider
       '-'*17
-    end 
+    end
 
     def empty_rank(rank_no)
       rank(" "*8, rank_no)
@@ -20,10 +20,13 @@ module ChessGame
       pieces = pieces_mapping.split("")
       pipes = ('|'*9).split('')
       pipes.zip(pieces).flatten.join + " #{rank_no}"
-    end 
+    end
 
     def piece_map
       @position.scan(/.{8}/)
+    end
+
+    def update(move)
     end
 
     def display
