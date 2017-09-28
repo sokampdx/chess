@@ -19,7 +19,6 @@ module ChessGame
     end
 
     def check_move(chess_move)
-      true
     end
 
     def update_game
