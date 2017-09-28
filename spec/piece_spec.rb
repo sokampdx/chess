@@ -2,13 +2,13 @@ require 'spec_helper'
 
 describe Piece do
   let(:init_position) { 'rnbqkbnrpppppppp                                PPPPPPPPRNBQKBNR' }
-  let(:init_position) { 'rnbqkbnrpppppppp            P                   PPPP PPPRNBQKBNR' }
-  let(:norm_position) { 'rnbqkbnrpppp ppp            p                   PPPPPPPPRNBQKBNR' }
-  let(:game) { Class.new { include Rules } }
+  let(:e5_position) { 'rnbqkbnrpppppppp                    P           PPPP PPPRNBQKBNR' }
+  let(:e4_position) { 'rnbqkbnrpppp ppp            p                   PPPPPPPPRNBQKBNR' }
+  let(:game) { Class.new { include ChessGame }}
 
   context '.move' do
     let(:normal_move) { 'e2e4' }
-    
+
     xit 'moves normal pieces' do
       expect(game.new.move(init_position, normal_move)).to eq(norm_position)
     end
