@@ -48,5 +48,29 @@ module ChessGame
 
     def resign?
     end
+
+    def game_start_message
+      <<HERE
+      Game Begin
+HERE
+    end
+
+    def game_end_message
+      return resign_message if resign?
+      return draw_message if draw?
+      return checkmate_message if checkmate?
+    end
+
+    def run
+      puts game_start_message
+      unless end_game?
+        puts display_position
+        puts before_move_message
+        user_input = get
+        move(user_input)
+        puts after_move_message
+      end
+      puts game_end_message
+    end
   end
 end
