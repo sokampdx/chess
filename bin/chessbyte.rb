@@ -3,7 +3,7 @@
 require "./path"
 
 def main
-  game = ChessGame::Game.new
+  game = Chess::Game.new
   puts game.display_position
 end
 

@@ -1,6 +1,6 @@
-#require "chess_game/version"
+#require "chess/version"
 
-module ChessGame
+module Chess
   class Game
     attr_reader :turn, :player
 

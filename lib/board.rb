@@ -1,4 +1,4 @@
-module ChessGame
+module Chess
   class Board
     def initialize(position = 'rnbqkbnrpppppppp                                PPPPPPPPRNBQKBNR')
       @position = position

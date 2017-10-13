@@ -33,7 +33,7 @@ describe Game do
     before(:each) do
       allow(game).to receive(:check_move).with(valid_move1).and_return(true)
       allow(game).to receive(:check_move).with(invalid_move1).and_return(false)
-      board = object_double(ChessGame::Board.new, :update => true)
+      board = object_double(Chess::Board.new, :update => true)
     end
 
     describe 'when given valid moves' do
